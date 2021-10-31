@@ -1,0 +1,189 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --maincolor: #280536;
+    --seccolor: #ffbf00;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navigation {
+    width: 100%;
+    height: 10vh;
+    background: var(--maincolor);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.nav-wrap {
+    width: 90%;
+    margin: 0px auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    list-style-type: none;
+}
+
+.link li a {
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'poppins';
+    font-weight: 500;
+    text-decoration: none;
+    transition: all ease-in-out .2s;
+}
+
+.link li a:hover {
+    color: var(--seccolor);
+}
+
+.hamburger {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background: black;
+}
+
+.profile h1 {
+    text-align: center;
+}
+
+.profile {
+    margin: 10vh 0vh 0vh 0vh;
+    width: 100%;
+    height: max-content;
+
+}
+
+.title {
+    font-family: 'poppins';
+    font-weight: 900;
+    color: var(--seccolor);
+}
+
+.profile-wrap {
+    width: 90%;
+    height: max-content;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: max-content;
+    height: max-content;
+    margin: 20px 0px;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+
+.card-wrap {
+    width: max-content;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.card-wrap img {
+    width: 350px;
+}
+
+.title-wrap {
+    width: 90%;
+    height: max-content;
+    margin: 0px auto;
+    padding: 10px 10px;
+}
+
+.name {
+    font-family: 'poppins';
+    font-weight: 700;
+    color: var(--maincolor);
+    font-size: 1.2rem;
+}
+
+.quote {
+    font-family: 'poppins';
+    color: var(--maincolor);
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--seccolor);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--maincolor);
+}
+
+@media screen and (max-width:470px) {
+    .hamburger {
+        display: flex;
+        position: relative;
+    }
+
+    .line {
+        background: white;
+        height: 4px;
+    }
+
+    .link {
+        transition: all ease-in-out .2s;
+        position: fixed;
+        width: 70%;
+        height: 100vh;
+        background: var(--maincolor);
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .link li {
+        padding: 0px 0px 0px 20px;
+    }
+
+    .hero {
+        font-size: 2.8rem;
+
+    }
+
+    .link.active {
+        left: 0;
+    }
+
+    .jumbotron-wrap {
+        width: 70%;
+    }
+
+    .galeri-wrap {
+        width: 80%;
+    }
+
+}
