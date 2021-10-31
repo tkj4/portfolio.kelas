@@ -1,0 +1,278 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+:root {
+	--maincolor: #280536;
+	--seccolor: #ffbf00;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.navigation {
+	width: 100%;
+	height: 10vh;
+	background: var(--maincolor);
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+.nav-wrap {
+	width: 90%;
+	margin: 0px auto;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.link {
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+	width: 50%;
+	align-items: center;
+	list-style-type: none;
+}
+
+.link li a {
+	color: white;
+	font-size: 1.1rem;
+	font-family: 'poppins';
+	font-weight: 500;
+	text-decoration: none;
+	transition: all ease-in-out .2s;
+}
+
+.link li a:hover {
+	color: var(--seccolor);
+}
+
+.hamburger {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	display: none;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	background: black;
+}
+
+.logo img {
+	border-radius: 100px;
+	width: 50px;
+}
+
+.jumbotron {
+	width: 100%;
+	height: 110vh;
+	background-image: url('./img/hero.jpeg');
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	background-position: center;
+}
+
+.jumbotron::after {
+	content: ' ';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.jumbotron-wrap {
+	width: 50%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	margin: 0px auto;
+	z-index: 1;
+}
+
+.hero {
+	color: var(--seccolor);
+	font-size: 3rem;
+	font-family: 'poppins';
+	font-weight: 900;
+}
+
+.subhero {
+	font-size: 1.2rem;
+	font-weight: 400;
+	font-family: 'poppins';
+	color: white;
+}
+
+.jumbotron-wrap button {
+	background-color: var(--seccolor);
+	border: none;
+	padding: 5px 10px;
+	font-family: 'poppins';
+	border-radius: 20px;
+	font-weight: 500;
+	transition: all ease-in-out .2s;
+	color: var(--maincolor);
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.jumbotron-wrap button:hover {
+	background: var(--maincolor);
+	color: var(--seccolor);
+}
+
+.title {
+	font-size: 3rem;
+	font-family: 'poppins';
+	font-weight: 900;
+	color: var(--seccolor);
+}
+
+.subtitle {
+	font-family: 'poppins';
+	letter-spacing: 150%;
+}
+
+.visi-misi {
+	width: 100%;
+	height: 101vh;
+	text-align: center;
+}
+
+.visi-misi-wrap {
+	width: 90%;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0px auto;
+	display: flex;
+	height: 100%;
+}
+
+.galeri {
+	width: 100%;
+	text-align: center;
+	height: max-content;
+}
+
+.galeri-wrap {
+	width: 50%;
+	height: 100%;
+	margin: 0px auto;
+}
+
+.galeri-wrap img {
+	width: 100%;
+}
+
+.tentang-kami {
+	width: 100%;
+	height: 100vh;
+}
+
+.tentang-kami-wrap {
+	width: 90%;
+	text-align: center;
+	height: 100%;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer {
+	width: 100%;
+	height: 20vh;
+	background: var(--maincolor);
+}
+
+.footer-wrap {
+	width: 90%;
+	margin: 0px auto;
+	text-align: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-wrap h1 {
+	font-family: 'poppins';
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--seccolor);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--maincolor);
+}
+
+@media screen and (max-width:470px) {
+	.hamburger {
+		display: flex;
+		position: relative;
+	}
+
+	.line {
+		background: white;
+		height: 4px;
+	}
+
+	.link {
+		transition: all ease-in-out .2s;
+		position: fixed;
+		width: 70%;
+		height: 100vh;
+		background: var(--maincolor);
+		top: 0;
+		left: -100%;
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.link li {
+		padding: 0px 0px 0px 20px;
+	}
+
+	.hero {
+		font-size: 2.8rem;
+
+	}
+
+	.link.active {
+		left: 0;
+	}
+
+	.jumbotron-wrap {
+		width: 70%;
+	}
+
+	.galeri-wrap {
+		width: 80%;
+	}
+}
