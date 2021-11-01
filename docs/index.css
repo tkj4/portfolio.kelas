@@ -67,9 +67,9 @@ html {
 	background: black;
 }
 
-.logo img {
-	border-radius: 100px;
-	width: 50px;
+.logo h1 {
+	color: var(--seccolor);
+	font-family: 'poppins';
 }
 
 .jumbotron {
