@@ -231,6 +231,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
 	background: var(--seccolor);
+	border-radius: 20px;
 }
 
 ::-webkit-scrollbar-track {
