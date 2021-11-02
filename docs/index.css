@@ -240,13 +240,15 @@ html {
 
 @media screen and (max-width:470px) {
 	.hamburger {
-		display: flex;
+		display: inline-block;
 		position: relative;
 	}
 
 	.line {
 		background: white;
 		height: 4px;
+		transition: all ease-in-out .2s;
+		margin: 0px 0px 8px 0px;
 	}
 
 	.link {
@@ -284,5 +286,23 @@ html {
 
 	.galeri-wrap {
 		width: 80%;
+	}
+
+	.line.active1 {
+		transform: rotate(45deg);
+		margin-top: 10px;
+	}
+
+	.line.active2 {
+		margin-top: -3.5px;
+		transform: rotate(135deg);
+	}
+
+	.line.active3 {
+		display: none;
+	}
+
+	.line.margin0 {
+		margin: 10px 0px 0px 0px;
 	}
 }
