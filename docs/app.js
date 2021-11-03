@@ -8,7 +8,6 @@ const line = document.querySelector('.line')
 
 
 
-
 btn.addEventListener('click',function(){
     link.classList.toggle('active')
     line.classList.toggle('margin0')
@@ -20,5 +19,9 @@ btn.addEventListener('click',function(){
 for (var click of item){
     click.addEventListener('click',function(){
         link.classList.remove('active')
+        line.classList.remove('margin0')
+        line1.classList.remove('active1')
+        line2.classList.remove('active2')
+        line3.classList.remove('active3')
     })
 }
